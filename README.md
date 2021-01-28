@@ -61,9 +61,23 @@ key -v 描述
 
 切面要做的就是把参数变成json参数保存在数据库，记录方法名，然后前端查询操作记录的时候，从数据库返回一条记录，包含方法名和json参数，有了方法名可以找到通用的描述，用了json可以替换掉通过描述的关键字，祖成完整的一条操作内容。
 
- ![1](assets/1.png)
-  ![2](assets/2.png)
- ![3](assets/3.png)
+我的项目里面的配置:
+
+```xml
+"cn.stylefeng.guns.cloud.system.modular.backend.controller.OyPoolController.addPledge": "单号: <orderId>,<pledgeType> : <pledgeAmount>",
+```
+
+![avatar](assert/1.png)
+
+我的数据库保存的记录
+
+{"orderId":"552212283762290688","userName":"x2y2","pledgeAmount":12,"pledgeType":"增加"}	
+
+![avatar](assert/2.png)
+
+后台页面实际的内容  :单号: 552212283762290688,增加 : 12
+
+![avatar](assert/3.png)
 
 
 
